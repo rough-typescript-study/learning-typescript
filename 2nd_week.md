@@ -2,29 +2,35 @@
 
 ### 📚 스터디 진행 사항 
 
-Q. 첵스 : 나머지 매개변수로의 튜플
+Q. 첵스 : 나머지 매개변수로의 튜플 ?
 
 A.
+교재 내용.1
 ```typescript
-// function logPair(name:string,value:number){
-//   console.log(`${name} has ${value}`);
-// }
+function logPair(name:string,value:number){
+  console.log(`${name} has ${value}`);
+}
 
-// const pairArray = ["슬링키",1]; // 이건 그냥 악질 배열 (타입이 선언 되지 않은)
+const pairArray = ["슬링키",1]; // 이건 그냥 악질 배열 (타입이 선언 되지 않은)
 
-// logPair(...pairArray);
+logPair(...pairArray);
 
-// const pariTupleInCorrect : [number,string] = [1,"슬링키"]; // 튜플 순서가 맞지 ㅇ낳아서
+const pariTupleInCorrect : [number,string] = [1,"슬링키"]; // 튜플 순서가 맞지 ㅇ낳아서
 
-// logPair(...pariTupleInCorrect);
+logPair(...pariTupleInCorrect);
 
-// const pairTupleCorrect : [string,number] = ["슬링키",1]; // 이건 맞음.
+const pairTupleCorrect : [string,number] = ["슬링키",1]; // 이건 맞음.
 
-// logPair(...pairTupleCorrect);
+logPair(...pairTupleCorrect);
 
-// function logTrio(value:[string,[number,boolean]],index:number, origin: [string,[number,boolean]][]){
-//   console.log(`${name} has ${value}`);
-// }
+function logTrio(value:[string,[number,boolean]],index:number, origin: [string,[number,boolean]][]){
+  console.log(`${name} has ${value}`);
+}
+
+```
+
+교재 내용.2
+```typescript
 
 
 function logTrio(name: string, value: [number,boolean]){
@@ -49,10 +55,13 @@ trios.forEach(logTrio);
 
 ---
 
-Q. 슬링키의 미션 중 학습
+<br/>
+<br/>
+
+Q. 슬링키 : 미션 중 학습한 사항을 공유하겠다.
 
 A.
-```tyepscript
+```typescript
 
 const check = (data:number)=> {
   const one = 1+data;
@@ -72,33 +81,40 @@ c();
 
 ---
 
+<br/>
+<br/>
 
-Q. 야미 : 구조적 타이핑의 예시 ??
+Q. 야미 : 교재 p84의 구조적 타이핑 ?
 
 A.
 ```typescript
 
-// const hasOnlyBoth = {
-//   first:"악질",
-//   last:"링키"
-// }
+const hasOnlyBoth = {
+  first:"악질",
+  last:"링키"
+}
 
-// type WithFirst ={
-//   first:string
-// }
+type WithFirst ={
+  first:string
+}
 
 
-// type WithLast ={
-//   last:string
-// }
+type WithLast ={
+  last:string
+}
 
-// const withFirst : WithFirst = hasOnlyBoth
-// const withLast : WithLast = hasOnlyBoth
+const withFirst : WithFirst = hasOnlyBoth
+const withLast : WithLast = hasOnlyBoth
 
-// for(const [key,value] of Object.entries(withFirst)){
-//   console.log(`${key} : ${value}`)
-// }
+for(const [key,value] of Object.entries(withFirst)){
+  console.log(`${key} : ${value}`)
+}
+```
+할당하고자 하는 변수의 프로퍼티가 더 많아도, 지정한 타입을 전부 포함하고 있다면 ok.
 
+
+example
+```typescript
 
 type car = "봉고차" | "경차";
 
@@ -123,7 +139,3 @@ const check2:type1 = {
 ```
 
 ---
-
-Q. 야미 : 옵셔널 타입 대신 판별된 유니온을 사용하는 것이 좋은가?
-
-A. ...
